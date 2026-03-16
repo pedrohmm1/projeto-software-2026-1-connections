@@ -63,6 +63,7 @@ jobs:
               -p 8080:8080 \
               -e REDIS_URL=redis \
               -e MONGO_URL=${{ secrets.MONGO_URL }} \
+              -e USER_URL=http://users \
               --network=rede \
               --name ${{ env.CONTAINER_NAME }} \
               ${{ env.DOCKER_IMAGE }}:${{ github.sha }}
